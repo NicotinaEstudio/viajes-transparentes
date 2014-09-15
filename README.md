@@ -33,9 +33,7 @@ Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Uste
 ##Equipo
 Indique los miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto. Añadir una referencia a sus perfiles de GitHub/Twitter/LinkedIn. Ejemplo:
 
-- [Juan Pablo Escobar](https://github.com/juanpabloe)
-- [Eduardo Salinas](https://github.com/lalo)
-- [Noé Domínguez](https://github.com/poguez)
+- [Carlos Isaac Hernández Morfín](https://github.com/Izakc)
 
 
 ##Licencia
