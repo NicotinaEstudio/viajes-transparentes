@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -112,9 +118,26 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServidorPublicoIFAIController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201409150020522_inicial.cs" />
+    <Compile Include="Migrations\201409150020522_inicial.Designer.cs">
+      <DependentUpon>201409150020522_inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409150045570_alta de modelo Servidor Publico IFAI.cs" />
+    <Compile Include="Migrations\201409150045570_alta de modelo Servidor Publico IFAI.Designer.cs">
+      <DependentUpon>201409150045570_alta de modelo Servidor Publico IFAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.cs" />
+    <Compile Include="Migrations\201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.Designer.cs">
+      <DependentUpon>201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ServidorPublicoIFAI.cs" />
+    <Compile Include="Models\Viaje.cs" />
+    <Compile Include="Models\ViajesTransparentesEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -156,7 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\ServidorPublicoIFAI\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -164,6 +187,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201409150020522_inicial.resx">
+      <DependentUpon>201409150020522_inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409150045570_alta de modelo Servidor Publico IFAI.resx">
+      <DependentUpon>201409150045570_alta de modelo Servidor Publico IFAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.resx">
+      <DependentUpon>201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
