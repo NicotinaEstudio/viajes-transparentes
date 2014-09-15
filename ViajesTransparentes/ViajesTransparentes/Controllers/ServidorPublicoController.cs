@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace ViajesTransparentes.Controllers
 {
-    public class ServidorPublicoIFAIController : Controller
+    public class ServidorPublicoController : Controller
     {
         // GET: ServidorPublicoIFAI
         public ActionResult Index()

@@ -89,6 +89,8 @@ namespace ViajesTransparentes.Models
         [DisplayName("Moneda")]
         [Required(ErrorMessage = "Campo requerido.")]
         public MONEDA MONEDA { get; set; }
+
+        // Pendiente de aquí en adelante para cuando se acepte la propuesta
         public TEMA TEMA { get; set; }
         public TIPO_COM TIPO_COM { get; set; }
         public string EVENTO { get; set; }
@@ -121,7 +123,7 @@ namespace ViajesTransparentes.Models
         public decimal VIATICO_DEVUELTO { get; set; }
         public string OBSERVACIONES { get; set; }
 
-        public virtual ServidorPublicoIFAI ServidorPublicoIFAI { get; set; }
+        public virtual ServidorPublico ServidorPublico { get; set; }
     }
 
     public enum MEC_ORIGEN
@@ -150,18 +152,31 @@ namespace ViajesTransparentes.Models
 
     public enum TEMA
     {
+        [Display(Name = "Politicas de acceso a la información")]
         PoliticasDeAccesoALaInformacion,
+        [Display(Name = "Asuntos internacionales")]
         AsuntosInternacionales,
+        [Display(Name = "Normativa de acceso a la información")]
         NormativaDeAccesoALaInformacion,
+        [Display(Name = "Capacitación y cultura de la transparencia")]
         CapacitacionYCulturaDeLaTransparencia,
+        [Display(Name = "Gestión documental de archívos")]
         GestionDocumentalDeArchivos,
+        [Display(Name = "Indicadores y evaluación")]
         IndicadoresYEvaluacion,
+        [Display(Name = "Normatividad de datos personales")]
         NormatividadDeDatosPersonales,
+        [Display(Name = "Supervisión, vigilancia, verificación y sanciones")]
         SupervisionVigilanciaVerificacionYSanciones,
+        [Display(Name = "Tecnologias de la información")]
         TecnologiasDeLaInformacion,
+        [Display(Name = "Gobierno abierto y transparencia")]
         GobiernoAbiertoYTransparencia,
+        [Display(Name = "Vinculación con estados y municipios")]
         VinculacionConEstadosYMunicipios,
+        [Display(Name = "Vinculación con nuevos sujetos obligados")]
         VinculacionConNuevosSujetosObligados,
+        [Display(Name = "Vinculación y promocion del derecho")]
         VinculacionYPromocionDelDerecho
     }
 

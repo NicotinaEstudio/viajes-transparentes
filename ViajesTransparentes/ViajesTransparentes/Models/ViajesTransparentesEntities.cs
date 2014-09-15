@@ -5,6 +5,6 @@ namespace ViajesTransparentes.Models
     public class ViajesTransparentesEntities :DbContext
     {
         public DbSet<Viaje> Viajes { get; set; }
-        public DbSet<ServidorPublicoIFAI> ServidorPublicoIFAI { get; set; }
+        public DbSet<ServidorPublico> ServidoresPublicos { get; set; }
     }
 }

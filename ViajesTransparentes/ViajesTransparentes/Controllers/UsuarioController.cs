@@ -24,7 +24,7 @@ namespace ViajesTransparentes.Controllers
 
         public ActionResult ServidoresPublicosIFAI()
         {
-            var servidores = db.ServidorPublicoIFAI;
+            var servidores = db.ServidoresPublicos;
             return View(servidores.ToList());
         }
     }

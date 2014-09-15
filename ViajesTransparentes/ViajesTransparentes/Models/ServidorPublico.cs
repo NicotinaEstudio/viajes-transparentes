@@ -5,13 +5,13 @@ using System.Web.Mvc;
 
 namespace ViajesTransparentes.Models
 {
-    [Bind(Exclude = "ServidorPublicoIFAIId")]
-    [Table("ServidorPublicoIFAI")]
-    public class ServidorPublicoIFAI
+    [Bind(Exclude = "ServidorPublicoId")]
+    [Table("ServidoresPublicos")]
+    public class ServidorPublico
     {
         [Key]
         [HiddenInput(DisplayValue = false)]
-        public int ServidorPublicoIFAIId { get; set; }
+        public int ServidorPublicoId { get; set; }
 
         [DisplayName("Institución")]
         [Required(ErrorMessage = "Campo requerido.")]
