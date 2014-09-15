@@ -13,5 +13,10 @@ namespace ViajesTransparentes.Controllers
         {
             return View();
         }
+
+        public ActionResult ViajeNuevo()
+        {
+            return View();
+        }
     }
 }

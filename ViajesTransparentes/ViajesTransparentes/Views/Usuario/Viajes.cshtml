@@ -1,0 +1,328 @@
+﻿@model IEnumerable<ViajesTransparentes.Models.Viaje>
+
+@{
+    ViewBag.Title = "Viajes";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h2>Viajes</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MEC_ORIGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INST_GENERA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_REP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONSECUTIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CARGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRUPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_VIAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACUERDO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFICIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAIS_ORIGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_ORIGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIUDAD_ORIGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAIS_DESTINO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_DESTINO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIUDAD_DESTINO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TARIFA_DIARIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MONEDA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEMA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_COM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EVENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URL_EVENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAINICIO_PART)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAFIN_PART)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOTIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANTECEDENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACTIVIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESULTADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONTRIBUCION_IFAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URL_COMUNICADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUBRE_PASAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_PASAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LINEA_ORIGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VUELO_ORIGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LINEA_REGRESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VUELO_REGRESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAINICIO_COM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAFIN_COM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASTO_PASAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASTO_VIATICO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INST_HOSPEDAJE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOTEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAINICIO_HOTEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAFIN_HOTEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COSTO_HOTEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPROBADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SIN_COMPROBAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VIATICO_DEVUELTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBSERVACIONES)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEC_ORIGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INST_GENERA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_REP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONSECUTIVO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CARGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRUPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_VIAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACUERDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFICIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAIS_ORIGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_ORIGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIUDAD_ORIGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAIS_DESTINO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_DESTINO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIUDAD_DESTINO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TARIFA_DIARIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MONEDA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEMA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_COM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EVENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.URL_EVENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAINICIO_PART)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAFIN_PART)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOTIVO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANTECEDENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACTIVIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESULTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONTRIBUCION_IFAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.URL_COMUNICADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUBRE_PASAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_PASAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LINEA_ORIGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VUELO_ORIGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LINEA_REGRESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VUELO_REGRESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAINICIO_COM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAFIN_COM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASTO_PASAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASTO_VIATICO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INST_HOSPEDAJE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOTEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAINICIO_HOTEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAFIN_HOTEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COSTO_HOTEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPROBADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SIN_COMPROBAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VIATICO_DEVUELTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBSERVACIONES)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ViajeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ViajeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ViajeId })
+        </td>
+    </tr>
+}
+
+</table>
