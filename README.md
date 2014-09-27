@@ -1,40 +1,49 @@
 
-README Reto ViajesTransparentes
+README Reto #ViajesTransparentes
 ============
 
-Este README es una plantilla y conjunto de recomendaciones que ayudan a estructurar un proyecto antes de enviarlo como propuesta al Reto.
-
-Para seguir mejores prácticas de documentación de proyectos código abierto, puedes ver el [repo-guidelines](https://github.com/CodeandoMexico/repo-guidelines) de [Codeando México](https://github.com/CodeandoMexico/).
-
-Recuerda revisar la convocatoria completa del [RetoViajesTransparentes](http://ifai.codeandomexico.org).
+Proyecto prototipo para el reto #ViajesTransparentes - IFAI
 
 ##Dependencias
-Esta sección debe tener una lista completa de todas las dependencias necesarias para ejecutar el proyecto.
+Las encontraras en el archívo package.config dentro del a solución.
 
 ##Instalación / Configuración 
-Esta sección es una guía paso a paso para instalar el proyecto. Se recomienda una lista ordenada.
+1. Abrir la solución con el IDE (Visual Studio).
+2. Cambiar los datos de la cadena de conexión a la base de datos en el archívo Web.config.
+3. Abrir el Package Manager Console y ejecutar el comando "update-database".
+4. Ejecutar aplicación.
 
 ##Screenshots
-Añadir algún screenshot interesante del proyecto. Muy recomendable.
+
 
 ##Demo
-Un enlace a una demostración en línea de su proyecto, así como un link a un screencast de máximo 4 minutos.
+- [Demostración en línea] {http://viajestransparentes.azurewebsites.net}
+- [API - Servidores públicos - Todos] {http://viajestransparentes.azurewebsites.net/api/ServidoresPublicos}
+- [API - Servidores públicos - Id] {http://viajestransparentes.azurewebsites.net/api/ServidoresPublicos/2}
+- [Screencast] {#}
 
 ##¿Preguntas o problemas? 
-Esta sección describe cómo otros desarrolladores y los usuarios deben interactuar con su proyecto. Aquí un ejemplo:
-
-Mantenemos la conversación del proyecto en nuestra página de problemas [issues] (https://github.com/CodeandoMexico/repo-guidelines/issues). Si usted tiene cualquier otra pregunta, nos puede contactar por correo <retos@codeandomexico.org>.
+Mantenemos la conversación del proyecto en nuestra página de problemas [issues] (https://github.com/NicotinaEstudio/viajes-transparentes/issues). Si usted tiene cualquier otra pregunta, nos puede contactar por correo <soporte@nicotinaestudio.mx>.
 
 ##Contribuye
-Sección para explicar cómo contribuir a su proyecto. Debe añadir enlace al archivo CONTRIBUTING.md. Ejemplo:
-
-Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Usted puede colaborar con [código](https://github.com/CodeandoMexico/repo-guidelines/pulls), [ideas](https://github.com/CodeandoMexico/repo-guidelines/issues) and [bugs](https://github.com/CodeandoMexico/repo-guidelines/issues).
+Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Usted puede colaborar con [código](https://github.com/NicotinaEstudio/viajes-transparentes/pulls), [ideas](https://github.com/NicotinaEstudio/viajes-transparentes/issues) y [bugs](https://github.com/NicotinaEstudio/viajes-transparentes/issues).
 
 ##Equipo
-Indique los miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto. Añadir una referencia a sus perfiles de GitHub/Twitter/LinkedIn. Ejemplo:
-
 - [Carlos Isaac Hernández Morfín](https://github.com/Izakc)
+- [Dulce María Soto Correo](#)
 
 
 ##Licencia
-Sección para agregar la licencia. Recuerda agregar el LICENSE.txt al repositorio.
+Copyright 2014 Nicotina Estudio
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
