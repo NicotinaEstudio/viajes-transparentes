@@ -4,6 +4,30 @@ README Reto #ViajesTransparentes
 
 Proyecto prototipo para el reto #ViajesTransparentes - IFAI
 
+Objetivos del reto:
+- Transparentar inteligentemente la información pública que se genera sobre los viajes de trabajo nacionales e internacionales de los comisionados y los servidores públicos del IFAI para fomentar un debate público informado y rendir cuentas en la materia
+- Desarrollar una herramienta web de código abierto que pueda ser replicada a nivel nacional e internacional por otras instituciones públicas.
+- Generar una primera práctica de reutilización de datos abiertos sobre viajes de trabajo para retroalimentar un posible primer estándar de publicación de datos abiertos en viajes de servidores públicos.
+- Difundir y dar uso a la información derivada de los trabajos realizados durante los viajes para asociar su costo a los resultados que producen a la luz de las tareas sustantivas y agenda estratégica de la institución.
+- Generar estadísticas y métricas sobre distintos aspectos de los viajes de trabajo, así como visualizaciones que permitan realizar comparaciones históricas, temáticas y por servidor público, y que faciliten el seguimiento y la evaluación.
+
+Roles:
+- Administrador
+- Servidor Público
+- Usuario
+
+Características:
+- Página de perfil de servidores públicos
+
+Tecnología:
+- SQLServer
+- Entity Framework
+- Code First
+- Migrations
+- ASP.NET MVC 5
+- WEB API
+
+
 ##Dependencias
 Las encontraras en el archívo package.config dentro del a solución.
 
@@ -14,7 +38,8 @@ Las encontraras en el archívo package.config dentro del a solución.
 4. Ejecutar aplicación.
 
 ##Screenshots
-
+![Perfil Servidor Público](http://www.nicotinaestudio.com/Content/Descargas/Retos//ViajesTransparentes/Imagenes/servidores-publicos.jpg "Perfil Servidor Público")
+![Detalle comisión](http://www.nicotinaestudio.com/Content/Descargas/Retos//ViajesTransparentes/Imagenes/comisiones.jpg "Detalle comisión")
 
 ##Demo
 - [Demostración en línea](http://viajestransparentes.azurewebsites.net)
