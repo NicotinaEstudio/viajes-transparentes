@@ -4,6 +4,8 @@ README Reto #ViajesTransparentes
 
 Proyecto prototipo para el reto #ViajesTransparentes - IFAI
 
+[Presentación del proyecto en SlideShare](http://www.slideshare.net/NicotinaEstudio/viajes-transparentes)
+
 Objetivos del reto:
 - Transparentar inteligentemente la información pública que se genera sobre los viajes de trabajo nacionales e internacionales de los comisionados y los servidores públicos del IFAI para fomentar un debate público informado y rendir cuentas en la materia
 - Desarrollar una herramienta web de código abierto que pueda ser replicada a nivel nacional e internacional por otras instituciones públicas.
@@ -20,6 +22,7 @@ Características:
 - Página de perfil de servidores públicos
 
 Tecnología:
+- C#
 - SQLServer
 - Entity Framework
 - Code First
@@ -55,7 +58,7 @@ Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Uste
 
 ##Equipo
 - [Carlos Isaac Hernández Morfín](https://github.com/Izakc)
-- [Dulce María Soto Correo](#)
+- [Dulce María Soto Correa](#)
 
 
 ##Licencia

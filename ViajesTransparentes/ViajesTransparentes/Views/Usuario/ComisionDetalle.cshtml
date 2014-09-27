@@ -1,0 +1,107 @@
+﻿@model ViajesTransparentes.Models.Comision
+
+@{
+    ViewBag.Title = "ComisionDetalle";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h2>ComisionDetalle</h2>
+
+<div>
+    <h4>Comision</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ServidorPublico.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServidorPublico.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEC_ORIGEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEC_ORIGEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INST_GENERA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INST_GENERA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_REP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_REP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONSECUTIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONSECUTIVO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CARGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CARGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GRUPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GRUPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACUERDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACUERDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OFICIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OFICIO)
+        </dd>
+
+    </dl>
+
+    <h4>Viajes (@Model.Viajes.Count())</h4>
+    <hr />
+    @foreach (var item in Model.Viajes)
+    {
+        <p>
+            Destino: @Html.DisplayFor(modelItem => item.ESTADO_DESTINO);<br />
+            Origen: @Html.DisplayFor(modelItem => item.ESTADO_ORIGEN);<br />
+
+            Viaticos: @Html.DisplayFor(modelItem => item.GASTO_VIATICO);<br />
+        </p>
+    }
+</div>

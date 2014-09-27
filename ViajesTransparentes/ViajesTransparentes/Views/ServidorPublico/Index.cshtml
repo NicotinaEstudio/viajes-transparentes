@@ -4,5 +4,9 @@
     Layout = "~/Views/Shared/_LayoutServidorPublico.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Servidor Público</h2>
 
+<ul>
+    <li>@Html.ActionLink("Lista de comisiones", "ComisionListar")</li>
+    <li>@Html.ActionLink("Nueva comision", "ComisionNueva")</li>
+</ul>

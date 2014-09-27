@@ -4,5 +4,9 @@
     Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Administrador</h2>
 
+<ul>
+    <li>@Html.ActionLink("Lista de servidores públicos", "ServidorPublicoListar")</li>
+    <li>@Html.ActionLink("Nuevo servidor público", "ServidorPublicoNuevo")</li>
+</ul>

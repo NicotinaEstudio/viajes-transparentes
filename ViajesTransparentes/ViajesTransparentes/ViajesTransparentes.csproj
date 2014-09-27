@@ -219,6 +219,7 @@
     <Content Include="Views\ServidorPublico\Index.cshtml" />
     <Content Include="Views\Administrador\Index.cshtml" />
     <Content Include="Views\ServidorPublico\ComisionListar.cshtml" />
+    <Content Include="Views\Usuario\ComisionDetalle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

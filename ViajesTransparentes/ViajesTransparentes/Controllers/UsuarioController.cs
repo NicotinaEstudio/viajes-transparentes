@@ -25,7 +25,7 @@ namespace ViajesTransparentes.Controllers
 {
     public class UsuarioController : Controller
     {
-        private ViajesTransparentesEntities db = new ViajesTransparentesEntities();
+        private ViajesTransparentesEntities _db = new ViajesTransparentesEntities();
 
         // GET: Usuario
         public ActionResult Index()
@@ -40,14 +40,20 @@ namespace ViajesTransparentes.Controllers
 
         public ActionResult ServidoresPublicos()
         {
-            var servidoresPublicos = db.ServidoresPublicos;
+            var servidoresPublicos = _db.ServidoresPublicos;
             return View(servidoresPublicos.ToList());
         }
 
         public ActionResult ServidorPublicoDetalle(int id)
         {
-            var servidorPublico = db.ServidoresPublicos.Where(g => g.PersonaId == id).Single();
+            var servidorPublico = _db.ServidoresPublicos.Where(g => g.PersonaId == id).Single();
             return View(servidorPublico);
+        }
+
+        public ActionResult ComisionDetalle(int id)
+        {
+            var comicion = _db.Comisiones.Where(g => g.ComisionId == id).Single();
+            return View(comicion);
         }
     }
 }

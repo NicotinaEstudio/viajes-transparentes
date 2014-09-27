@@ -111,7 +111,9 @@
         <hr />
         @foreach (var item in Model.Comisiones)
         {
-            @Html.DisplayFor(modelItem => item.INST_GENERA)
+            @Html.DisplayFor(modelItem => item.INST_GENERA)<br/>
+            
+            @Html.ActionLink("VER MAS +", "ComisionDetalle", new { Id = item.ComisionId})
         }
     </div>
 </div>
