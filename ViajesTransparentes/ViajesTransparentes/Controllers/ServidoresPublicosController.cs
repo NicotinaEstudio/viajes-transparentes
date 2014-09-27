@@ -17,37 +17,35 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 using ViajesTransparentes.Models;
 
 namespace ViajesTransparentes.Controllers
 {
-    public class UsuarioController : Controller
+    /// <summary>
+    /// Controlador para WEB API
+    /// </summary>
+    public class ServidoresPublicosController : ApiController
     {
         private ViajesTransparentesEntities db = new ViajesTransparentesEntities();
 
-        // GET: Usuario
-        public ActionResult Index()
+        // GET api/ServidoresPublicos
+        public List<ServidorPublico> GetAllServidoresPublicos()
         {
-            return View();
+            return db.ServidoresPublicos.ToList();
         }
 
-        public ActionResult Viajes()
+        // GET api/ServidoresPublicos/2
+        public IHttpActionResult GetServidoresPublicos(int id)
         {
-            return View();
-        }
-
-        public ActionResult ServidoresPublicos()
-        {
-            var servidoresPublicos = db.ServidoresPublicos;
-            return View(servidoresPublicos.ToList());
-        }
-
-        public ActionResult ServidorPublicoDetalle(int id)
-        {
-            var servidorPublico = db.ServidoresPublicos.Where(g => g.PersonaId == id).Single();
-            return View(servidorPublico);
+            var servidorPublico = db.ServidoresPublicos.FirstOrDefault((p) => p.PersonaId == id);
+            if (servidorPublico == null)
+            {
+                return NotFound();
+            }
+            return Ok(servidorPublico);
         }
     }
 }

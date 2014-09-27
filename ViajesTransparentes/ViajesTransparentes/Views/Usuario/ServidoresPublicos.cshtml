@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ViajesTransparentes.Models.ServidorPublico>
+
+@{
+    ViewBag.Title = "Servidores públicos";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h2>Servidores públicos</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CorreoElectrónico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Institucion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDePersonal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreDelCargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreDelCargoSuperior)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnidadAdministrativa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClaveDelPuesto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreDelPuesto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorreoElectrónico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Institucion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDePersonal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreDelCargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreDelCargoSuperior)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnidadAdministrativa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClaveDelPuesto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreDelPuesto)
+        </td>
+        <td>
+            @Html.ActionLink("Ver", "ServidorPublicoDetalle", new { id = item.PersonaId })
+        </td>
+    </tr>
+}
+
+</table>

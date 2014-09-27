@@ -1,0 +1,117 @@
+﻿@model ViajesTransparentes.Models.ServidorPublico
+
+@{
+    ViewBag.Title = "ServidorPublicoDetalle";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h2></h2>
+<div class="jumbotron">
+    <h1>@Html.DisplayFor(model => model.NombreCompleto)</h1>
+    <p class="lead">@Html.DisplayFor(model => model.NombreDelCargo)</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Información</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PrimerApellido)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PrimerApellido)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SegundoApellido)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SegundoApellido)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CorreoElectrónico)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CorreoElectrónico)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Institucion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Institucion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoDePersonal)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TipoDePersonal)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreDelCargo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NombreDelCargo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreDelCargoSuperior)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NombreDelCargoSuperior)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UnidadAdministrativa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UnidadAdministrativa)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ClaveDelPuesto)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ClaveDelPuesto)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreDelPuesto)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NombreDelPuesto)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="col-md-4">
+        <h4>Comisiones</h4>
+        <hr />
+        @foreach (var item in Model.Comisiones)
+        {
+            @Html.DisplayFor(modelItem => item.INST_GENERA)
+        }
+    </div>
+</div>

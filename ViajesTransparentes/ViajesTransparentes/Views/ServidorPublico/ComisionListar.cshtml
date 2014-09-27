@@ -1,0 +1,88 @@
+﻿@model IEnumerable<ViajesTransparentes.Models.Comision>
+
+@{
+    ViewBag.Title = "ComisionListar";
+    Layout = "~/Views/Shared/_LayoutServidorPublico.cshtml";
+}
+
+<h2>ComisionListar</h2>
+
+<p>
+    @Html.ActionLink("Nueva", "ComisionNueva")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServidorPublico.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEC_ORIGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INST_GENERA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_REP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONSECUTIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CARGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRUPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACUERDO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFICIO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServidorPublico.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEC_ORIGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INST_GENERA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_REP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONSECUTIVO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CARGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRUPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACUERDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFICIO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ComisionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ComisionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ComisionId })
+        </td>
+    </tr>
+}
+
+</table>

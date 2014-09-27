@@ -1,62 +1,52 @@
-﻿using System;
+﻿/**
+* Copyright 2014 Nicotina Estudio
+* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+*     http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+**/
+
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Web.Mvc;
 
 namespace ViajesTransparentes.Models
 {
-    [Bind(Exclude = "ViajeId")]
-    [Table("Viajes")]
+    /// <summary>
+    /// Clase que representa el objeto Viaje
+    /// </summary>
     public class Viaje
     {
         [Key]
         [HiddenInput(DisplayValue = false)]
         public int ViajeId { get; set; }
 
-        [DisplayName("Mecanismo que origina la comisión")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public MEC_ORIGEN MEC_ORIGEN { get; set; }
+        public int ComisionId { get; set; }
 
-        [DisplayName("Quien invita")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public string INST_GENERA { get; set; }
+        public virtual Comision Comision { get; set; }
 
-        [DisplayName("Unidad responsable")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public string UR { get; set; }
+        [ScaffoldColumn(false)]
+        [DisplayName("Alta")]
+        [DataType(DataType.Date)]
+        public DateTime FechaDeAlta { get; set; }
 
-        [DisplayName("Tipo de representación requerida")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public TIPO_REP TIPO_REP { get; set; }
-
-        [DisplayName("Número de comisión")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public string CONSECUTIVO { get; set; }
-
-        [DisplayName("Servidor público comisionado")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public string NOMBRE { get; set; }
-
-        [DisplayName("Cargo")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public string CARGO { get; set; }
-
-        [DisplayName("Grupo jerárquico")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public string GRUPO { get; set; }
+        [ScaffoldColumn(false)]
+        [DisplayName("Modificación")]
+        [DataType(DataType.Date)]
+        public DateTime FechaDeMod { get; set; }
 
         [DisplayName("Tipo de viaje")]
         [Required(ErrorMessage = "Campo requerido.")]
         public TIPO_VIAJE TIPO_VIAJE { get; set; }
-
-        [DisplayName("No. de acuerdo de autorización del pleno")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public string ACUERDO { get; set; }
-
-        [DisplayName("No. de oficio de comisión")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        public int OFICIO { get; set; }
 
         [DisplayName("Pais de origen")]
         [Required(ErrorMessage = "Campo requerido.")]
@@ -95,7 +85,11 @@ namespace ViajesTransparentes.Models
         public TIPO_COM TIPO_COM { get; set; }
         public string EVENTO { get; set; }
         public string URL_EVENTO { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime FECHAINICIO_PART { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime FECHAFIN_PART { get; set; }
         public string MOTIVO { get; set; }
         public string ANTECEDENTE { get; set; }
@@ -109,7 +103,11 @@ namespace ViajesTransparentes.Models
         public string VUELO_ORIGEN { get; set; }
         public string LINEA_REGRESO { get; set; }
         public string VUELO_REGRESO { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime FECHAINICIO_COM { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime FECHAFIN_COM { get; set; }
         public decimal GASTO_PASAJE { get; set; }
         public decimal GASTO_VIATICO { get; set; }
@@ -122,20 +120,6 @@ namespace ViajesTransparentes.Models
         public decimal SIN_COMPROBAR { get; set; }
         public decimal VIATICO_DEVUELTO { get; set; }
         public string OBSERVACIONES { get; set; }
-
-        public virtual ServidorPublico ServidorPublico { get; set; }
-    }
-
-    public enum MEC_ORIGEN
-    {
-        Invitacion,
-        Requerimiento
-    }
-
-    public enum TIPO_REP
-    {
-        Tecnico,
-        AltoNivel
     }
 
     public enum TIPO_VIAJE

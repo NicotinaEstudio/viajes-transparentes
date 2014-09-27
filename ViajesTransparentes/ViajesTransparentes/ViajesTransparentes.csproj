@@ -46,9 +46,17 @@
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -58,6 +66,14 @@
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -109,39 +125,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdministradorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServidoresPublicosController.cs" />
     <Compile Include="Controllers\ServidorPublicoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201409150020522_inicial.cs" />
-    <Compile Include="Migrations\201409150020522_inicial.Designer.cs">
-      <DependentUpon>201409150020522_inicial.cs</DependentUpon>
+    <Compile Include="Migrations\201409162023182_inicial.cs" />
+    <Compile Include="Migrations\201409162023182_inicial.Designer.cs">
+      <DependentUpon>201409162023182_inicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201409150045570_alta de modelo Servidor Publico IFAI.cs" />
-    <Compile Include="Migrations\201409150045570_alta de modelo Servidor Publico IFAI.Designer.cs">
-      <DependentUpon>201409150045570_alta de modelo Servidor Publico IFAI.cs</DependentUpon>
+    <Compile Include="Migrations\201409162125165_alta de etiquetas de validacion en modelo persona.cs" />
+    <Compile Include="Migrations\201409162125165_alta de etiquetas de validacion en modelo persona.Designer.cs">
+      <DependentUpon>201409162125165_alta de etiquetas de validacion en modelo persona.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.cs" />
-    <Compile Include="Migrations\201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.Designer.cs">
-      <DependentUpon>201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.cs</DependentUpon>
+    <Compile Include="Migrations\201409162132525_etiquetas de validacion en todos los modelos.cs" />
+    <Compile Include="Migrations\201409162132525_etiquetas de validacion en todos los modelos.Designer.cs">
+      <DependentUpon>201409162132525_etiquetas de validacion en todos los modelos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201409151325335_renombrado de modelo ServidorPublicoIFAI a ServidorPublico.cs" />
-    <Compile Include="Migrations\201409151325335_renombrado de modelo ServidorPublicoIFAI a ServidorPublico.Designer.cs">
-      <DependentUpon>201409151325335_renombrado de modelo ServidorPublicoIFAI a ServidorPublico.cs</DependentUpon>
+    <Compile Include="Migrations\201409172144424_alta de campo fecha de alta en modelos.cs" />
+    <Compile Include="Migrations\201409172144424_alta de campo fecha de alta en modelos.Designer.cs">
+      <DependentUpon>201409172144424_alta de campo fecha de alta en modelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409172304337_prueba IColection en modelo Servidor Publico.cs" />
+    <Compile Include="Migrations\201409172304337_prueba IColection en modelo Servidor Publico.Designer.cs">
+      <DependentUpon>201409172304337_prueba IColection en modelo Servidor Publico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.cs" />
+    <Compile Include="Migrations\201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.Designer.cs">
+      <DependentUpon>201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\ServidorPublico.cs" />
     <Compile Include="Models\Viaje.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\ServidorPublico.cs" />
+    <Compile Include="Models\Comision.cs" />
     <Compile Include="Models\ViajesTransparentesEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -154,6 +178,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\viajestransparentes - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -182,10 +207,18 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_LayoutServidorPublico.cshtml" />
-    <Content Include="Views\ServidorPublico\ViajeNuevo.cshtml" />
     <Content Include="Views\Shared\_LayoutUsuario.cshtml" />
     <Content Include="Views\Usuario\Viajes.cshtml" />
-    <Content Include="Views\Usuario\ServidoresPublicosIFAI.cshtml" />
+    <Content Include="Views\Usuario\ServidoresPublicos.cshtml" />
+    <Content Include="Views\ServidorPublico\ComisionNueva.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdministrador.cshtml" />
+    <Content Include="Views\Administrador\ServidorPublicoNuevo.cshtml" />
+    <Content Include="Views\Administrador\ServidorPublicoListar.cshtml" />
+    <Content Include="Views\Usuario\ServidorPublicoDetalle.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\ServidorPublico\Index.cshtml" />
+    <Content Include="Views\Administrador\Index.cshtml" />
+    <Content Include="Views\ServidorPublico\ComisionListar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -198,17 +231,23 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201409150020522_inicial.resx">
-      <DependentUpon>201409150020522_inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409162023182_inicial.resx">
+      <DependentUpon>201409162023182_inicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409150045570_alta de modelo Servidor Publico IFAI.resx">
-      <DependentUpon>201409150045570_alta de modelo Servidor Publico IFAI.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409162125165_alta de etiquetas de validacion en modelo persona.resx">
+      <DependentUpon>201409162125165_alta de etiquetas de validacion en modelo persona.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.resx">
-      <DependentUpon>201409150051139_alta de modelo Servidor Publico IFAI y referenciado desde modelo viajes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409162132525_etiquetas de validacion en todos los modelos.resx">
+      <DependentUpon>201409162132525_etiquetas de validacion en todos los modelos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409151325335_renombrado de modelo ServidorPublicoIFAI a ServidorPublico.resx">
-      <DependentUpon>201409151325335_renombrado de modelo ServidorPublicoIFAI a ServidorPublico.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409172144424_alta de campo fecha de alta en modelos.resx">
+      <DependentUpon>201409172144424_alta de campo fecha de alta en modelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409172304337_prueba IColection en modelo Servidor Publico.resx">
+      <DependentUpon>201409172304337_prueba IColection en modelo Servidor Publico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.resx">
+      <DependentUpon>201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
