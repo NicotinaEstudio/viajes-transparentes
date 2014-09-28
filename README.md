@@ -13,10 +13,26 @@ Objetivos del reto:
 - Difundir y dar uso a la información derivada de los trabajos realizados durante los viajes para asociar su costo a los resultados que producen a la luz de las tareas sustantivas y agenda estratégica de la institución.
 - Generar estadísticas y métricas sobre distintos aspectos de los viajes de trabajo, así como visualizaciones que permitan realizar comparaciones históricas, temáticas y por servidor público, y que faciliten el seguimiento y la evaluación.
 
-Roles:
+Roles y sus funciones:
 - Administrador
+	- Administración de servidores públicos y usuarios (CRUD).
+	- Administración de comisiones y viajes (CRUD).
+	- Asignación de comisiones a servidores públicos.
 - Servidor Público
+	- Alta de comprobantes de gastos.
+	- Alta de observaciones en viajes y comisiones.
+	- Alta de fotografías sobre las comisiones y viajes.
 - Usuario
+	- Acceso al perfil público de servidores públicos.
+	- Posibilidad de seguir y recibir notificaciones (Correo electrónico, RSS, twitter) de los servidores públicos de su elección.
+	- Acceso a estadísticas de servidores públicos.
+	- Comparación entre servidores públicos.
+	
+API:
+- Permitir y facilitar el acceso a la información en aplicaciones de terceros.
+
+Sugerencias:
+- Desarrollo de una aplicación móvil donde los servidores públicos puedan dar de alta fotografías sobre los eventos, comprobantes de gastos y completar la información sobre sus comisiones y viajes en el momento que sea lo deseen.
 
 Características:
 - Página de perfil de servidores públicos
@@ -46,6 +62,8 @@ Las encontraras en el archívo package.config dentro del a solución.
 
 ##Demo
 - [Demostración en línea](http://viajestransparentes.azurewebsites.net)
+- [Perfil Servidor Público](http://viajestransparentes.azurewebsites.net/Usuario/ServidorPublicoDetalle/2)
+- [Detalle comisión](http://viajestransparentes.azurewebsites.net/Usuario/ComisionDetalle/2)
 - [API - Servidores públicos - Todos](http://viajestransparentes.azurewebsites.net/api/ServidoresPublicos)
 - [API - Servidores públicos - Id](http://viajestransparentes.azurewebsites.net/api/ServidoresPublicos/2)
 - [Screencast] {#}
@@ -58,7 +76,7 @@ Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Uste
 
 ##Equipo
 - [Carlos Isaac Hernández Morfín](https://github.com/Izakc)
-- [Dulce María Soto Correa](#)
+- [Dulce María Soto Correa](https://www.linkedin.com/profile/view?id=373138606)
 
 
 ##Licencia
