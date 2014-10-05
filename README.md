@@ -63,7 +63,7 @@ Las encontraras en el archívo package.config dentro del a solución.
 ##Demo
 - [Demostración en línea](http://viajestransparentes.azurewebsites.net)
 - [Perfil Servidor Público](http://viajestransparentes.azurewebsites.net/Usuario/ServidorPublicoDetalle/3)
-- [Detalle comisión](http://viajestransparentes.azurewebsites.net/Usuario/ComisionDetalle/3)
+- [Detalle comisión](http://viajestransparentes.azurewebsites.net/Usuario/ComisionDetalle/1)
 - [API - Servidores públicos - Todos](http://viajestransparentes.azurewebsites.net/api/ServidoresPublicos)
 - [API - Servidores públicos - Id](http://viajestransparentes.azurewebsites.net/api/ServidoresPublicos/3)
 - [Screencast] {#}
