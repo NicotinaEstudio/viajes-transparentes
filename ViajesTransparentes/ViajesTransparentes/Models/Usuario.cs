@@ -14,19 +14,17 @@
 * limitations under the License.
 **/
 
-using System.Data.Entity;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ViajesTransparentes.Models
 {
-    public class ViajesTransparentesEntities :DbContext
+    [Table("Usuarios")]
+    public class Usuario : Persona
     {
-        public DbSet<Comision> Comisiones { get; set; }
-        public DbSet<Viaje> Viajes { get; set; }
-        public DbSet<ServidorPublico> ServidoresPublicos { get; set; }
-        public DbSet<Persona> Personas { get; set; }
-        public DbSet<Comprobante> Comprobantes { get; set; }
-        public DbSet<Viatico> Viaticos { get; set; }
-        public DbSet<GrupoJerarquico> GruposJerarquicos { get; set; }
-        public DbSet<Usuario> Usuarios { get; set; }
+        [DisplayName("Contraseña")]
+        [Required(ErrorMessage = "Campo requerido.")]
+        public string Contrasena { get; set; }
     }
 }

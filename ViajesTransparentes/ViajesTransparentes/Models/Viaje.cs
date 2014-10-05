@@ -17,6 +17,7 @@
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Web.Mvc;
 
 namespace ViajesTransparentes.Models
@@ -24,6 +25,8 @@ namespace ViajesTransparentes.Models
     /// <summary>
     /// Clase que representa el objeto Viaje
     /// </summary>
+    /// [Bind(Exclude = "PersonaId")]
+    [Table("Viajes")]
     public class Viaje
     {
         [Key]

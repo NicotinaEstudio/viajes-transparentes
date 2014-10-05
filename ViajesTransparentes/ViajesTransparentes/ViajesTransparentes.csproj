@@ -137,36 +137,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201409162023182_inicial.cs" />
-    <Compile Include="Migrations\201409162023182_inicial.Designer.cs">
-      <DependentUpon>201409162023182_inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201409162125165_alta de etiquetas de validacion en modelo persona.cs" />
-    <Compile Include="Migrations\201409162125165_alta de etiquetas de validacion en modelo persona.Designer.cs">
-      <DependentUpon>201409162125165_alta de etiquetas de validacion en modelo persona.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201409162132525_etiquetas de validacion en todos los modelos.cs" />
-    <Compile Include="Migrations\201409162132525_etiquetas de validacion en todos los modelos.Designer.cs">
-      <DependentUpon>201409162132525_etiquetas de validacion en todos los modelos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201409172144424_alta de campo fecha de alta en modelos.cs" />
-    <Compile Include="Migrations\201409172144424_alta de campo fecha de alta en modelos.Designer.cs">
-      <DependentUpon>201409172144424_alta de campo fecha de alta en modelos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201409172304337_prueba IColection en modelo Servidor Publico.cs" />
-    <Compile Include="Migrations\201409172304337_prueba IColection en modelo Servidor Publico.Designer.cs">
-      <DependentUpon>201409172304337_prueba IColection en modelo Servidor Publico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.cs" />
-    <Compile Include="Migrations\201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.Designer.cs">
-      <DependentUpon>201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.cs</DependentUpon>
+    <Compile Include="Migrations\201410051901545_inicial.cs" />
+    <Compile Include="Migrations\201410051901545_inicial.Designer.cs">
+      <DependentUpon>201410051901545_inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Comprobante.cs" />
+    <Compile Include="Models\GrupoJerarquico.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Viaje.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\ServidorPublico.cs" />
     <Compile Include="Models\Comision.cs" />
     <Compile Include="Models\ViajesTransparentesEntities.cs" />
+    <Compile Include="Models\Viatico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +204,11 @@
     <Content Include="Views\Administrador\Index.cshtml" />
     <Content Include="Views\ServidorPublico\ComisionListar.cshtml" />
     <Content Include="Views\Usuario\ComisionDetalle.cshtml" />
+    <Content Include="Views\Administrador\ViaticosListar.cshtml" />
+    <Content Include="Views\Administrador\ViaticosNuevo.cshtml" />
+    <Content Include="Views\Administrador\GrupoJerarquicoListar.cshtml" />
+    <Content Include="Views\ServidorPublico\ComisionDetalle.cshtml" />
+    <Content Include="Views\ServidorPublico\ViajeNuevo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -232,23 +221,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201409162023182_inicial.resx">
-      <DependentUpon>201409162023182_inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409162125165_alta de etiquetas de validacion en modelo persona.resx">
-      <DependentUpon>201409162125165_alta de etiquetas de validacion en modelo persona.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409162132525_etiquetas de validacion en todos los modelos.resx">
-      <DependentUpon>201409162132525_etiquetas de validacion en todos los modelos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409172144424_alta de campo fecha de alta en modelos.resx">
-      <DependentUpon>201409172144424_alta de campo fecha de alta en modelos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409172304337_prueba IColection en modelo Servidor Publico.resx">
-      <DependentUpon>201409172304337_prueba IColection en modelo Servidor Publico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.resx">
-      <DependentUpon>201409222326250_cambio de tipo de dato en campo OFICIO modelo COmision.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201410051901545_inicial.resx">
+      <DependentUpon>201410051901545_inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

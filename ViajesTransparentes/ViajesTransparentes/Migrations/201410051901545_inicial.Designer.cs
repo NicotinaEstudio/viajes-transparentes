@@ -13,7 +13,7 @@ namespace ViajesTransparentes.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201409162023182_inicial"; }
+            get { return "201410051901545_inicial"; }
         }
         
         string IMigrationMetadata.Source

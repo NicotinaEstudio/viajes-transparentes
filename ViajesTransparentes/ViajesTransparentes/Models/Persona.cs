@@ -74,6 +74,6 @@ namespace ViajesTransparentes.Models
         [DisplayName("Correo electrónico")]
         [Required(ErrorMessage = "Campo requerido.")]
         [EmailAddress(ErrorMessage = "Dirección de correo electrónico inválido.")]
-        public string CorreoElectrónico { get; set; }
+        public string CorreoElectronico { get; set; }
     }
 }

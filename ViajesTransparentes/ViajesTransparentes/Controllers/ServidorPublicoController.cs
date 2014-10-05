@@ -40,6 +40,12 @@ namespace ViajesTransparentes.Controllers
             return View(comisiones.ToList());
         }
 
+        public ActionResult ComisionDetalle(int id)
+        {
+            var comision = _db.Comisiones.Where(g => g.ComisionId == id).Single();
+            return View(comision);
+        }
+
         public ActionResult ComisionNueva()
         {
             return View();
@@ -54,7 +60,7 @@ namespace ViajesTransparentes.Controllers
             if (ModelState.IsValid)
             {
                 comision.FechaDeAlta = comision.FechaDeMod = DateTime.Now;
-                comision.PersonaId = 2;
+                comision.PersonaId = 1;
 
                 _db.Comisiones.Add(comision);
                 _db.SaveChanges();
@@ -63,5 +69,32 @@ namespace ViajesTransparentes.Controllers
             }
             return View(comision);
         }
+
+        public ActionResult ViajeNuevo()
+        {
+            ViewBag.ComisionId = new SelectList(_db.Comisiones, "ComisionId", "CONSECUTIVO");
+            
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ViajeNuevo([Bind(
+            Include = "MEC_ORIGEN, INST_GENERA, UR, TIPO_REP, CONSECUTIVO, CARGO, GRUPO, ACUERDO, OFICIO"
+            )] Comision comision)
+        {
+            if (ModelState.IsValid)
+            {
+                comision.FechaDeAlta = comision.FechaDeMod = DateTime.Now;
+                comision.PersonaId = 1;
+
+                _db.Comisiones.Add(comision);
+                _db.SaveChanges();
+
+                return RedirectToAction("ComisionListar");
+            }
+            return View(comision);
+        }
+
     }
 }

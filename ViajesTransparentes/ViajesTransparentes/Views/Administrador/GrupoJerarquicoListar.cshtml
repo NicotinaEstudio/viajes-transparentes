@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ViajesTransparentes.Models.GrupoJerarquico>
+
+@{
+    ViewBag.Title = "GrupoJerarquicoListar";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<h2>GrupoJerarquicoListar</h2>
+
+<p>
+    
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GrupoJerarquicoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GrupoJerarquicoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GrupoJerarquicoId })
+        </td>
+    </tr>
+}
+
+</table>

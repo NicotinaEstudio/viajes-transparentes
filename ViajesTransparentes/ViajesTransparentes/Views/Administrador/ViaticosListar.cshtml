@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ViajesTransparentes.Models.Viatico>
+
+@{
+    ViewBag.Title = "ViaticosListar";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+
+<h2>Lista de viáticos</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "ViaticosNuevo")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GrupoJerarquico.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoViaje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZonaDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TarifaDiariaViaticosMXP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TarifaDiariaViaticosUSD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrupoJerarquico.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoViaje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZonaDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TarifaDiariaViaticosMXP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TarifaDiariaViaticosUSD)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ViaticoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ViaticoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ViaticoId })
+        </td>
+    </tr>
+}
+
+</table>

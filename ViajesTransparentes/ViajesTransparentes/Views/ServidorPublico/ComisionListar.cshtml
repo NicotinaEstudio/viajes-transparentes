@@ -78,11 +78,9 @@
             @Html.DisplayFor(modelItem => item.OFICIO)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ComisionId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ComisionId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ComisionId })
+            @Html.ActionLink("Detalles", "ComisionDetalle", new { id=item.ComisionId })
         </td>
-    </tr>
+    </tr>   
 }
 
 </table>

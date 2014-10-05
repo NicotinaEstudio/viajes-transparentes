@@ -28,6 +28,11 @@ namespace ViajesTransparentes.Models
     [Table("ServidoresPublicos")]
     public class ServidorPublico : Persona
     {
+        [DisplayName("Grupo jerárquico")]
+        public int GrupoJerarquicoId { get; set; }
+
+        public virtual GrupoJerarquico GrupoJerarquico { get; set; }
+
         /// <summary>
         /// Nombre de la instiución de la que forma parte
         /// </summary>
@@ -61,11 +66,6 @@ namespace ViajesTransparentes.Models
         [Required(ErrorMessage = "Campo requerido.")]
         [StringLength(200, ErrorMessage = "Máximo 200 caracteres.")]
         public string UnidadAdministrativa { get; set; }
-
-        [DisplayName("Clave del puesto")]
-        [Required(ErrorMessage = "Campo requerido.")]
-        [StringLength(100, ErrorMessage = "Máximo 100 caracteres.")]
-        public string ClaveDelPuesto { get; set; }
 
         [DisplayName("Nombre del puesto")]
         [Required(ErrorMessage = "Campo requerido.")]

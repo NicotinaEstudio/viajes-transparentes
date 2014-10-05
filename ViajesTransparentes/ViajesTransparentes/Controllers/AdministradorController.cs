@@ -35,6 +35,15 @@ namespace ViajesTransparentes.Controllers
         {
             return View();
         }
+        #region GRUPO JERARQUICO
+        // GET: Administrador/ViaticosListar
+        public ActionResult GrupoJerarquicoListar()
+        {
+            var grupo = _db.GruposJerarquicos;
+
+            return View(grupo.ToList());
+        }
+        #endregion
 
         #region SERVIDORES PÚBLICOS
 
@@ -49,6 +58,7 @@ namespace ViajesTransparentes.Controllers
         // GET: Administrador/ServidorPublicoNuevo
         public ActionResult ServidorPublicoNuevo()
         {
+            ViewBag.GrupoJerarquicoId = new SelectList(_db.GruposJerarquicos, "GrupoJerarquicoId", "Codigo");
             return View();
         }
 
@@ -56,7 +66,7 @@ namespace ViajesTransparentes.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ServidorPublicoNuevo([Bind(
-            Include = "Nombre, PrimerApellido, SegundoApellido, CorreoElectrónico, Institucion, TipoDePersonal, NombreDelCargo, NombreDelCargoSuperior, UnidadAdministrativa, ClaveDelPuesto, NombreDelPuesto"
+            Include = "Nombre, PrimerApellido, SegundoApellido, CorreoElectronico, GrupoJerarquicoId, Institucion, TipoDePersonal, NombreDelCargo, NombreDelCargoSuperior, UnidadAdministrativa, NombreDelPuesto"
             )] ServidorPublico servidorPublico)
         {
             if (ModelState.IsValid)
@@ -74,5 +84,40 @@ namespace ViajesTransparentes.Controllers
         }
 
         #endregion SERVIDORES PÚBLICOS
+
+        #region VIATICOS
+        // GET: Administrador/ViaticosListar
+        public ActionResult ViaticosListar()
+        {
+            var viaticos = _db.Viaticos;
+
+            return View(viaticos.ToList());
+        }
+
+        // GET: Administrador/ViaticosNuevo
+        public ActionResult ViaticosNuevo()
+        {
+            ViewBag.GrupoJerarquicoId = new SelectList(_db.GruposJerarquicos, "GrupoJerarquicoId", "Codigo");
+
+            return View();
+        }
+
+        // POST: Administrador/ViaticosNuevo
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ViaticosNuevo([Bind(
+            Include = "GrupoJerarquicoId, TipoViaje, ZonaDestino, TarifaDiariaViaticosMXP, TarifaDiariaViaticosUSD"
+            )] Viatico viatico)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Viaticos.Add(viatico);
+                _db.SaveChanges();
+
+                return RedirectToAction("ViaticosListar");
+            }
+            return View(viatico);
+        }
+        #endregion
     }
 }
